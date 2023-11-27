@@ -1,8 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SudokuBlock from './SudokuBlock.vue';
+</script>
 
 <template>
   <div class="board">
-    <h1>Game Board :)</h1>
+    <h1>Sudoku :)</h1>
+    <SudokuBlock v-for="n in 9" :key="n" />
   </div>
 </template>
 
