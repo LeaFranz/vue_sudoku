@@ -14,7 +14,11 @@ const isGreatherThan5 = computed(() => number.value > 5 ? true : false)
 </template>
 
 <style scoped>
-div {
-    border: 1px solid blue;
+.sudoku-block {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
 }
 </style>
