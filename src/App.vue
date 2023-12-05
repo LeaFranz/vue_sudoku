@@ -1,16 +1,11 @@
 <script setup lang="ts">
-import GameBoard from './components/GameBoard.vue'
+// import GameBoard from './components/GameBoard.vue'
 </script>
 
+<script setup></script>
+
 <template>
-  <main>
-    <GameBoard />
-  </main>
-  <aside>
-    <header>
-      <h1>Sudoku :D</h1>
-    </header>
-  </aside>
+  <router-view></router-view>
 </template>
 
 <style scoped>
