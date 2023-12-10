@@ -1,13 +1,15 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import PlayScreen from './components/PlayScreen.vue'
-import SplashScreen from './components/SplashScreen.vue'
+import SplashScreen from './components/screens/SplashScreen.vue'
+import PlayScreen from './components/screens/PlayScreen.vue'
+import GameOverScreen from './components/screens/GameOverScreen.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
   { path: '/', component: SplashScreen },
-  { path: '/play', component: PlayScreen }
+  { path: '/play', component: PlayScreen },
+  { path: '/game-over', component: GameOverScreen }
 ]
 
 export const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
