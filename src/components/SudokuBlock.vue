@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-import NumberBlock from './NumberBlock.vue';
-
-const number = ref(6)
-const isGreatherThan5 = computed(() => number.value > 5 ? true : false)
-
+import NumberBlock from './NumberBlock.vue'
+const { blockNumber } = defineProps<{ blockNumber: number }>()
 </script>
 
 <template>
-    <div class="sudoku-block" v-if="isGreatherThan5">
-        <NumberBlock v-for="n in 9" :key="n" />
+    <div class="sudoku-block">
+        <NumberBlock v-for="n in 9" :key="n" :sudoku-block-number="blockNumber" :number-block-number="n" />
     </div>
 </template>
 
